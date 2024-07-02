@@ -1,9 +1,17 @@
-import validator from "validator";
 import Pet from "../models/pet.model.js";
 import { cloudinary } from "../config/storage.js";
 import { asyncHandler } from "../middlewares/error.middleware.js";
-import { storage } from "../config/storage.js";
 
+// Get all pets that are not yet removed
+export const getAllPets = asyncHandler(async (request, response) => {
+  const pets = await Pet.find({ availability: "Available" })
+    .select(["_id", "name", "image"]);
+
+  response.status(200).send({
+    message: "List of pets for adoption.",
+    data: pets,
+  });
+});
 
 // Post a pet for adoption where breed is optional
 export const addPet = asyncHandler(async (request, response) => {
@@ -50,17 +58,6 @@ export const addPet = asyncHandler(async (request, response) => {
   response.status(201).send({
     message: "New pet has been posted.",
     data: newPet,
-  });
-});
-
-// Get all pets that are not yet removed
-export const getAllPets = asyncHandler(async (request, response) => {
-  const pets = await Pet.find({ availability: "Available" })
-    .select(["_id", "name", "image"]);
-
-  response.status(200).send({
-    message: "List of pets for adoption.",
-    data: pets,
   });
 });
 
