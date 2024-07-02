@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  --primary: #248179;
+  --secondary: #4AA79C;
+  --accent: #FD6158;
+  /* --accent: #FD767E;
+  --highlight: #FD6158; */
+  /* --primary: #752092;
+  --secondary: #C957BC; */
+  --container: #FFC872;
+  --background: #FFE3B3;
+}
+
+#file-input::file-selector-button {
+  background-color: var(--container);
+  padding-block: 0.375rem;
+  border: thin solid var(--container);
+  border-radius: 3px;
+}
+
+#file-input::file-selector-button:hover {
+  filter: brightness(0.75);
+  cursor: pointer;
+}
+
+#modal {
+  position: fixed;
+  text-align: center;
+  top: 25%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, 0);
+}
+
+main {
+  min-height: calc(100vh - 10rem);
+}
+
+#hero-image { 
+  clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
+  height: 100%;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.hover-bg-secondary:hover {
+  background-color: var(--secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.hover-bg-accent:hover {
+  background-color: var(--accent);
+}
+
+.bg-container {
+  background-color: var(--container);
+}
+
+.border-container {
+  border-color: var(--container);
+}
+
+@media (min-width: 768px) {
+  #hero-image {
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  }
+}
