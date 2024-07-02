@@ -1,4 +1,4 @@
-# PET ADOPTION: A BACKEND APP
+# Full Stack Pet Adoption App
 
 ## User Stories or Tasks
 ### Authentication
@@ -41,3 +41,5 @@
 - Routes for applying for adoption
 - Routes for saving/ liking interesting pets
 - Route to see all adopted pets 
+- Pages for donation, adoption stories, and services
+- Filter available pets for adoption

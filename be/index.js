@@ -21,7 +21,7 @@ app.use(helmet());
 
 app.use(`${baseURL}/users`, userRouter);
 app.use(`${baseURL}/pets`, petsRouter);
-// app.use("/", (request, response) => response.send({ app: "pet_adoption" }));
+app.use("/", (request, response) => response.send({ app: "pet_adoption" }));
 
 app.use(pageNotFound);
 app.use(errorHandler);
