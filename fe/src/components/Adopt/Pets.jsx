@@ -37,15 +37,15 @@ export default function Pets() {
         <h1 name='stats' className='text-3xl font-semibold tracking-tight'>Adopt a Pet</h1>
 
         <div>
-          <h3 className="mb-4 font-semibold text-gray-900 text-right">Filter</h3>
-          <div className="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg sm:flex">
-            <button onClick={() => setFilter("")} className="w-full border-b border-gray-300 sm:border-b-0 sm:border-r hover-bg-accent rounded-l-lg">
+          <h3 className="font-semibold text-gray-900 text-right">Filter</h3>
+          <div className="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg flex">
+            <button onClick={() => setFilter("")} className="w-full border-gray-300 border-b-0 border-r hover-bg-accent rounded-l-lg">
               <label className="w-full p-4 cursor-pointer text-sm font-medium text-gray-900">All </label>
             </button>
-            <button onClick={() => setFilter("Dog")} className="w-full border-b border-gray-300 sm:border-b-0 sm:border-r hover-bg-accent">
+            <button onClick={() => setFilter("Dog")} className="w-full border-gray-300 border-b-0 border-r hover-bg-accent">
               <label className="w-full p-4 cursor-pointer text-sm font-medium text-gray-900">Dogs</label>
             </button>
-            <button onClick={() => setFilter("Cat")} className="w-full border-b border-gray-300 sm:border-b-0 hover-bg-accent rounded-r-lg">
+            <button onClick={() => setFilter("Cat")} className="w-full border-gray-300 border-b-0 hover-bg-accent rounded-r-lg">
               <label className="w-full p-4 cursor-pointer text-sm font-medium text-gray-900">Cats</label>
             </button>
           </div>
